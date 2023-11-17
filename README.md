@@ -1,4 +1,5 @@
 # 梳理
+## 文件夹结构
 ```
 ├─dimensionalityReduction   (降维)
 │  ├─autoEncoder            (自动编码器)
@@ -13,4 +14,9 @@
 ├─wholeProcess              (整个建模过程，包含各个旧版本)
 
 ├─GIT_BASIC_COMMAND.md      (git基础命令)
+```
+## 数据
+请联系我（备注 数据）
+```
+微信    19966438400
 ```
