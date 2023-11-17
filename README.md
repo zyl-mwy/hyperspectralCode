@@ -12,6 +12,7 @@
 ├─normalShape               (归一化大小)
 ├─trainValTest              (数据集划分)
 ├─wholeProcess              (整个建模过程，包含各个旧版本)
+├─otherDataHandleCode       (数据基本处理代码)
 
 ├─GIT_BASIC_COMMAND.md      (git基础命令)
 ```
