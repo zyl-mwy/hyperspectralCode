@@ -16,7 +16,7 @@ from myLoss import R2Loss
 from myTest import test
 
 
-trainModel = False
+trainModel = True
 num_epochs = 100
 modelname = 'main.pth'
 
