@@ -21,11 +21,16 @@ def pca_dr(src):
     # spy.imshow(data=pc.cov, title="pc_cov")
     img_pc = pc_98.transform(src)  # 把数据转换到主成分空间
     # print(img_pc.shape)
-    plt.imshow(src[:, :, :3])
-    plt.show()
-    plt.imshow(img_pc[:, :, :3])
-    plt.show()
+    # plt.imshow(src[:, :, :3])
+    # plt.show()
+    # plt.imshow(img_pc[:, :, :3])
+    # plt.show()
     # spy.imshow(img_pc[:, :, :3], stretch_all=True)  # 前三个主成分显示
+    for i in range(img_pc.shape[2]):
+        plt.subplot(4, 5, i+1)
+        plt.imshow(img_pc[:, :, i], cmap='gray')
+        plt.axis('off')
+    plt.show()
     return img_pc
 
 if __name__ == "__main__":
@@ -33,3 +38,11 @@ if __name__ == "__main__":
     hyperSpectalFile = spy.envi.open(os.path.join(osPath, '2023-10-12_009_0.hdr'), os.path.join(osPath, '2023-10-12_009_0.img')).read_bands([i for i in range(204)])
     spy.view_cube(hyperSpectalFile, bands=[29, 19, 9])
     # pca_dr(hyperSpectalFile)
+    for i in range(204):
+        plt.subplot(12, 17, i+1)
+        plt.imshow(hyperSpectalFile[:, :, i], cmap='gray')
+        plt.axis('off')
+    plt.show()
+    pca_dr(hyperSpectalFile)
+    
+        
